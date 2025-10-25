@@ -12,11 +12,9 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color; 
 import javafx.scene.text.*; 
 import javafx.stage.Stage; 
-/** 
-* erstellt das View zum Basisfenster 
-*/ 
+
 public class Anwendungssystem{ 
-// Objekt zum Lesen der Kunden.csv - Datei 
+
 private CsvDateiLeser csvDateiLeser; 
      private GridPane grid        = new GridPane(); 
      private Label lblAnzeige     = new Label ("Anzeige"); 
