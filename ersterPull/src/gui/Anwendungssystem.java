@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 */ 
 public class Anwendungssystem{ 
 // Objekt zum Lesen der Kunden.csv - Datei 
-//private CsvDateiLeser csvDateiLeser; 
+private CsvDateiLeser csvDateiLeser; 
      private GridPane grid        = new GridPane(); 
      private Label lblAnzeige     = new Label ("Anzeige"); 
      private TextArea txtAnzeige  = new TextArea(); 
@@ -29,13 +29,13 @@ public class Anwendungssystem{
        * @param primaryStage das Stage-Objekt zum Basisfenster 
       */ 
      public Anwendungssystem(Stage primaryStage){ 
-//             this.csvDateiLeser = new CsvDateiLeser(); 
-          this.grid.setAlignment(Pos.CENTER); 
+       this.csvDateiLeser = new CsvDateiLeser(); 
+       this.grid.setAlignment(Pos.CENTER); 
        this.grid.setHgap(10); 
        this.grid.setVgap(10); 
        this.grid.setPadding(new Insets(25, 25, 25, 25)); 
-//       primaryStage.setTitle( 
-//            this.csvDateiLeser.getUeberschrift());  
+       primaryStage.setTitle( 
+            this.csvDateiLeser.getUeberschrift());  
         Scene scene = new Scene(grid, 210, 200); 
        primaryStage.setScene(scene); 
           primaryStage.show(); 
